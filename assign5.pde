@@ -116,8 +116,8 @@ void brickMaker() {
     specialBrick[B] = 2;
   }
   for (int i = 0; i<brick.length; i++) {
-    int col = i%10;
-    int row = i/10;
+    int col = int (i%10);
+    int row = int (i/10);
     if (specialBrick[i] == 0) {
       if (row==0) {
         brick[i]=new Brick(140 + col*40, 50+row*40, 54, 190, 147);
