@@ -56,7 +56,6 @@ void draw() {
       if(brickCount == brick.length){
         status = GAME_WIN;
       }
-      System.out.println(brickCount);
     }
     
     ball.display();
