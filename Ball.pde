@@ -19,29 +19,26 @@ class Ball {
           brick[i].hit = true;
         }
       }
-      
       if (isHit(x, y, size, board.x, board.y, board.len, 10) == true) {
         ySpeed *=-1;
         xSpeed = (this.x-board.x)/board.len*8;
       }
-      
       if ( x < size/2 || x + size/2 >width) {
         xSpeed *= -1;
       }
-      
       if ( y < size/2) {
         ySpeed *= -1;
       }
-      
-      if (y > 800) {        
+      if (y>800) {        
         afterClick = false;
-        y=1500;
-        ySpeed*= -1;
+        y=2000;
+        ySpeed*=-1;
+        xSpeed= random(-5,5);
         board.len = 80;
-      }else{
-      x = board.x;
-      y = board.y - size - 5;
       }
+    } else {
+      x=board.x;
+      y=board.y-size-5;
     }
   }
 
