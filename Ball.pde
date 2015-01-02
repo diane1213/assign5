@@ -33,9 +33,9 @@ class Ball {
         ySpeed *= -1;
       }
       
-      if (y > height) {        
+      if (y > 800) {        
         afterClick = false;
-        xSpeed=0
+        xSpeed=0;
         ySpeed=0;
         board.len = 80;
       }else{
