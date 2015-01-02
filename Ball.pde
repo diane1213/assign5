@@ -33,12 +33,14 @@ class Ball {
         ySpeed *= -1;
       }
       
-      if (y>800) {        
+      if (y > height) {        
         afterClick = false;
-        x=board.x;
-        y=board.y-size-5;
-        xSpeed= random(-5,5);
+        xSpeed=0
+        ySpeed=0;
         board.len = 80;
+      }else{
+      x = board.x;
+      y = board.y - size - 5;
       }
     }
   }
